@@ -5,7 +5,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebas
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 // If you want to use Analytics or Auth, import them with the consistent version:
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
-// import { getAuth } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
 
 // 2. Your web app's Firebase configuration
@@ -25,7 +25,7 @@ const db = getFirestore(app); // Get your Firestore instance here
 
 // If you want to use Analytics or Auth, initialize them:
 // const analytics = getAnalytics(app);
-// const auth = getAuth(app);
+const auth = getAuth(app);
 
 
 // 4. Main function to fetch and display song data
