@@ -38,3 +38,54 @@
     })
     .catch((error) => console.log("Error getting document:", error));
 
+import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js';
+// ... (assuming you have 'app' initialized and 'db' obtained from getFirestore(app) )
+
+// --- YOU ONLY NEED TO EDIT THIS LINE ---
+const stuckSongsCollectionRef = collection(db, "stuckSongs"); // Change "users" to "stuckSongs"!
+// ------------------------------------
+
+// Get all documents in the 'stuckSongs' collection once
+getDocs(stuckSongsCollectionRef) // Use your new reference here
+  .then((querySnapshot) => {
+    const allStuckSongsData = []; // Array to store all song data as JS objects
+
+    // Loop through each song document found
+    querySnapshot.forEach((docSnap) => {
+      // Get the data for the current song document as a JavaScript object
+      const songData = docSnap.data();
+      allStuckSongsData.push(songData);
+
+      console.log(`${docSnap.id} => `, songData); // docSnap.id will be the document ID
+    });
+
+    console.log("All stuck songs as an array of JavaScript objects:", allStuckSongsData);
+
+    let displayHtml = "<h2>My Stuck Songs:</h2>";
+    if (allStuckSongsData.length > 0) {
+        displayHtml += "<ul>";
+        allStuckSongsData.forEach(song => {
+            // Accessing the specific fields: Artist, Date, Song
+            // Using || 'N/A' as a fallback in case a field is missing
+            const artist = song.Artist || 'Unknown Artist';
+            const date = song.Date ? song.Date.toDate().toLocaleDateString() : 'Unknown Date'; // Assuming 'Date' is a Firestore Timestamp
+            const songTitle = song.Song || 'Unknown Song';
+
+            displayHtml += `
+                <li>
+                    <strong>Song:</strong> ${songTitle}<br>
+                    <strong>Artist:</strong> ${artist}<br>
+                    <strong>Date Added:</strong> ${date}
+                </li>
+            `;
+        });
+        displayHtml += "</ul>";
+    } else {
+        displayHtml += "<p>No stuck songs found yet!</p>";
+    }
+    document.getElementById('data-display').innerHTML = displayHtml;
+  })
+  .catch((error) => {
+    console.error("Error getting stuck songs:", error);
+    document.getElementById('data-display').innerText = "Error loading stuck songs.";
+  });
