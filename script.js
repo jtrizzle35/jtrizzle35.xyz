@@ -37,6 +37,16 @@
         }
     })
     .catch((error) => console.log("Error getting document:", error));
+ 
+  db.collection("messages").onSnapshot((snapshot) => {
+      snapshot.docChanges().forEach((change) => {
+          if (change.type === "added") {
+              console.log("New message: ", change.doc.data());
+          }
+          // ... handle modified or removed messages
+      });
+  });
+
 
 import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js';
 // ... (assuming you have 'app' initialized and 'db' obtained from getFirestore(app) )
