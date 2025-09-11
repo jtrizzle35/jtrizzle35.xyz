@@ -24,6 +24,16 @@ h2{
 	line-height:2
 }
 
+h3{
+	line-height:1
+	font-weight: bold
+}
+
+h4{
+	line-height:1
+}
+
+
 ul{
     list-style-type: none;
 }
