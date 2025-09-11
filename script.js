@@ -60,13 +60,11 @@ async function fetchAndDisplayStuckSongs() {
             const songTitle = song.Song || 'Unknown Song';
 
             displayHtml += `
-                //<li>
-                <h2>
-                    <strong>Date Added:</strong> ${date}
-                    ${artist}:
-                    ${songTitle}
-                </h2>
-                //</li>
+                <h3>  
+                    <strong>${date}</strong>
+                    <h3>${artist}:
+                    ${songTitle}</h3>
+                </h3>
             `;
         });
         displayHtml += "</ul>";
