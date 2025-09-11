@@ -62,7 +62,7 @@ async function fetchAndDisplayStuckSongs() {
             displayHtml += `
                 <h3>  
                     <strong>${date}</strong>
-                    <h3>${artist}:
+                    ${artist}:
                     ${songTitle}</h3>
                 </h3>
             `;
