@@ -32,8 +32,7 @@ const auth = getAuth(app);
 async function fetchAndDisplayStuckSongs() {
   try {
     const stuckSongsCollectionRef = collection(db, "stuckSongs");
-    const querySnapshot = await getDocs(stuckSongsCollectionRef); // Use await for cleaner async code
-    orderBy ("date");
+    const querySnapshot = await getDocs(stuckSongsCollectionRef), orderBy ("date"); // Use await for cleaner async code
 
     const allStuckSongsData = [];
     querySnapshot.forEach((docSnap) => {
