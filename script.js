@@ -2,7 +2,8 @@
 
 // 1. Import all necessary functions from the SDKs (using consistent version 12.2.1)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+// UPDATED: Added 'query' and 'orderBy' to Firestore imports
+import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 // If you want to use Analytics or Auth, import them with the consistent version:
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
@@ -31,8 +32,14 @@ const auth = getAuth(app);
 // 4. Main function to fetch and display song data
 async function fetchAndDisplayStuckSongs() {
   try {
-    const stuckSongsCollectionRef = collection(db, "stuckSongs").orderBy("Date");
-    const querySnapshot = await getDocs(stuckSongsCollectionRef); // Use await for cleaner async code
+    // OLD: const stuckSongsCollectionRef = collection(db, "stuckSongs").orderBy("Date");
+    // NEW: First get the collection reference, then build the query
+    const stuckSongsCollectionRef = collection(db, "stuckSongs");
+    const q = query(stuckSongsCollectionRef, orderBy("Date", "desc")); // Order by 'Date' field, descending (newest first)
+
+    // OLD: const querySnapshot = await getDocs(stuckSongsCollectionRef);
+    // NEW: Use the 'q' (query object) for getDocs
+    const querySnapshot = await getDocs(q);
 
     const allStuckSongsData = [];
     querySnapshot.forEach((docSnap) => {
