@@ -2,7 +2,10 @@
 
 // 1. Import all necessary functions from the SDKs (using consistent version 12.2.1)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+// UPDATED: Added 'query' and 'orderBy' to Firestore imports
 import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+// If you want to use Analytics or Auth, import them with the consistent version:
+// import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
 
@@ -21,15 +24,21 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app); // Get your Firestore instance here
 
+// If you want to use Analytics or Auth, initialize them:
+// const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
 
 // 4. Main function to fetch and display song data
 async function fetchAndDisplayStuckSongs() {
   try {
+    // OLD: const stuckSongsCollectionRef = collection(db, "stuckSongs").orderBy("Date");
+    // NEW: First get the collection reference, then build the query
     const stuckSongsCollectionRef = collection(db, "stuckSongs");
     const q = query(stuckSongsCollectionRef, orderBy("Date", "desc")); // Order by 'Date' field, descending (newest first)
 
+    // OLD: const querySnapshot = await getDocs(stuckSongsCollectionRef);
+    // NEW: Use the 'q' (query object) for getDocs
     const querySnapshot = await getDocs(q);
 
     const allStuckSongsData = [];
@@ -41,45 +50,31 @@ async function fetchAndDisplayStuckSongs() {
 
     console.log("All stuck songs as an array of JavaScript objects:", allStuckSongsData);
 
+    // Get the HTML element where you want to display the data
     const dataDisplayElement = document.getElementById('data-display');
     if (!dataDisplayElement) {
         console.error("Element with ID 'data-display' not found in HTML!");
-        return;
+        return; // Exit if the element isn't found
     }
 
     let displayHtml = "<h2>My Stuck Songs:</h2>";
     if (allStuckSongsData.length > 0) {
-        // Start building the table HTML (NO INLINE STYLE TAG HERE)
-        displayHtml += `
-            <table>
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Artist</th>
-                        <th>Song</th>
-                    </tr>
-                </thead>
-                <tbody>
-        `;
-
+        displayHtml += "<ul>";
         allStuckSongsData.forEach(song => {
             const artist = song.Artist || 'Unknown Artist';
+            // Assuming 'Date' is a Firestore Timestamp, convert it
             const date = song.Date && song.Date.toDate ? song.Date.toDate().toLocaleDateString() : 'Unknown Date';
             const songTitle = song.Song || 'Unknown Song';
 
             displayHtml += `
-                    <tr>
-                        <td>${date}</td>
-                        <td>${artist}</td>
-                        <td>${songTitle}</td>
-                    </tr>
+                <h3>  
+                    <strong>${date}</strong>
+                    ${artist}:
+                    ${songTitle}</h3>
+                </h3>
             `;
         });
-
-        displayHtml += `
-                </tbody>
-            </table>
-        `;
+        displayHtml += "</ul>";
     } else {
         displayHtml += "<p>No stuck songs found yet!</p>";
     }
@@ -97,7 +92,3 @@ async function fetchAndDisplayStuckSongs() {
 // 5. Call the function to start fetching and displaying songs
 fetchAndDisplayStuckSongs();
 
-  }
-}
-
-// (unchanged call to fetchAndDisplayStuckSongs)
