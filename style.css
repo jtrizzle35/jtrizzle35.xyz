@@ -37,3 +37,18 @@ h4{
 ul{
     list-style-type: none;
 }
+
+dl>dt {
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+dl>dd {
+  margin-left: 160px;
+}
