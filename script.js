@@ -33,6 +33,7 @@ async function fetchAndDisplayStuckSongs() {
   try {
     const stuckSongsCollectionRef = collection(db, "stuckSongs");
     const querySnapshot = await getDocs(stuckSongsCollectionRef); // Use await for cleaner async code
+    orderBy ("date");
 
     const allStuckSongsData = [];
     querySnapshot.forEach((docSnap) => {
