@@ -1,11 +1,34 @@
 // app.js
 
-// (unchanged imports and Firebase initialization)
+// 1. Import all necessary functions from the SDKs (using consistent version 12.2.1)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
+
+// 2. Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyB5KLbJp-646Rp-VxGu5L8ZXyYSNZrRPQc",
+  authDomain: "jtrizzle35-c4885.firebaseapp.com",
+  projectId: "jtrizzle35-c4885",
+  storageBucket: "jtrizzle35-c4885.firebasestorage.app",
+  messagingSenderId: "245297230292",
+  appId: "1:245297230292:web:a3daf36c7ad139ee656641",
+  measurementId: "G-FN8V48ZRZP"
+};
+
+// 3. Initialize Firebase (only once)
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app); // Get your Firestore instance here
+
+const auth = getAuth(app);
+
+
+// 4. Main function to fetch and display song data
 async function fetchAndDisplayStuckSongs() {
   try {
     const stuckSongsCollectionRef = collection(db, "stuckSongs");
-    const q = query(stuckSongsCollectionRef, orderBy("Date", "desc"));
+    const q = query(stuckSongsCollectionRef, orderBy("Date", "desc")); // Order by 'Date' field, descending (newest first)
 
     const querySnapshot = await getDocs(q);
 
@@ -26,28 +49,8 @@ async function fetchAndDisplayStuckSongs() {
 
     let displayHtml = "<h2>My Stuck Songs:</h2>";
     if (allStuckSongsData.length > 0) {
-        // Start building the table HTML
+        // Start building the table HTML (NO INLINE STYLE TAG HERE)
         displayHtml += `
-            <style>
-                /* Basic table styling for better readability - BORDERS REMOVED! */
-                table {
-                    width: 100%;
-                    /* border-collapse: collapse; - Can be kept or removed, doesn't affect borders if they're 'none' */
-                    margin-top: 20px;
-                    border: none; /* Explicitly remove table border */
-                }
-                th, td {
-                    border: none; /* Explicitly remove cell borders */
-                    padding: 8px;
-                    text-align: left;
-                }
-                th {
-                    background-color: #f2f2f2;
-                }
-                tr:nth-child(even) {
-                    background-color: #f9f9f9;
-                }
-            </style>
             <table>
                 <thead>
                     <tr>
@@ -88,6 +91,12 @@ async function fetchAndDisplayStuckSongs() {
     if (dataDisplayElement) {
         dataDisplayElement.innerText = "Error loading songs. Please check console for details.";
     }
+  }
+}
+
+// 5. Call the function to start fetching and displaying songs
+fetchAndDisplayStuckSongs();
+
   }
 }
 
