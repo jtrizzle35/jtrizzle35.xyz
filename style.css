@@ -35,7 +35,7 @@ ul{
 }
 
 dl>dt {
-  // float: left;
+  float: left;
   width: 150px;
   overflow: hidden;
   clear: left;
