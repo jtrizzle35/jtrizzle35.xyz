@@ -42,7 +42,7 @@ a:hover{background-color: #FFA1C4;}
 dt,
 dd {
   display: inline-block;
-  width: calc(50% - 100rem);
+  width: calc(50% - 50rem);
   margin: 0;
 }
 
