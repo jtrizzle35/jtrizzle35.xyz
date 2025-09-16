@@ -42,7 +42,7 @@ a:hover{background-color: #FFA1C4;}
 dt,
 dd {
   display: inline-block;
-  width: calc(50% - 5rem);
+  width: calc(50% - 20rem);
   margin: 0;
 }
 
@@ -51,5 +51,5 @@ dt {
 }
 
 dt::after {
-  content: "\00a0\00a0\00a0\00a0";
+  content: "\00a0\00a0";
 }
