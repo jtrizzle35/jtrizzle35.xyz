@@ -39,44 +39,13 @@ a:visited{text-decoration: none; color:#000; background-color:#f2f2f2}
 a:hover{background-color: #FFA1C4;}
 .site-main{margin:20px;}
 
-//dl>dt {
-// float: left;
-//  width: 150px;
-//  overflow: hidden;
-//  clear: left;
-//  text-align: right;
-//  text-overflow: ellipsis;
-//  white-space: nowrap;
-//  font-weight: bold;
-//}
-//
-//dl>dd {
-//  margin-left: 160px;
-//}
-
-//dl {
-//  display: grid;
-//  grid-gap: 4px 16px;
-//  grid-template-columns: max-content;
-//}
-//dt {
-//  font-weight: bold;
-//}
-//dd {
-//  margin: 0;
-//  grid-column-start: 2;
-//}
 dt,
 dd {
   display: inline-block;
   width: calc(50% - 0.5rem);
-  margin: 0;
+  margin: 1;
 }
 
 dt {
   text-align: right;
-}
-
-dt::after {
-  content: ":";
 }
