@@ -70,7 +70,7 @@ async function fetchAndDisplayStuckSongs() {
                 <dl>  
                     <dt>${date}</dt>
                     <dd>${artist}:
-                    ${songTitle}</dd
+                    ${songTitle}</dd>
                 </dl>
             `;
         });
