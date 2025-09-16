@@ -43,9 +43,13 @@ dt,
 dd {
   display: inline-block;
   width: calc(50% - 0.5rem);
-  margin: 1;
+  margin: 0;
 }
 
 dt {
   text-align: right;
+}
+
+dt::after {
+  content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
 }
