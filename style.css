@@ -39,10 +39,14 @@ a:visited{text-decoration: none; color:#000; background-color:#f2f2f2}
 a:hover{background-color: #FFA1C4;}
 .site-main{margin:20px;}
 
+span:hover {
+background-color: #FFA1C4;
+}
+
 dt,
 dd {
   display: inline-block;
-  width: calc(50% - 50rem);
+  width: calc(50% - 30rem);
   margin: 0;
 }
 
