@@ -42,13 +42,13 @@ a:visited{text-decoration: none; color:#000; background-color:#f2f2f2}
 a:hover{background-color: #FFA1C4;}
 .site-main{margin:20px;}
 
-//highlight song when hover
+//highlight song when hover//
 
 span:hover {
 background-color: #FFA1C4;
 }
 
-//styling for list of songs
+//styling for list of songs//
 
 dt,
 dd {
