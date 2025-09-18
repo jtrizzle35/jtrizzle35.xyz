@@ -57,7 +57,7 @@ async function fetchAndDisplayStuckSongs() {
         return; // Exit if the element isn't found
     }
 
-   let displayHtml = "<h2>• • •</h2>";
+   let displayHtml = "<h2>stuck in my head</h2>";
     if (allStuckSongsData.length > 0) {
         displayHtml += "<ul>";
         allStuckSongsData.forEach(song => {
