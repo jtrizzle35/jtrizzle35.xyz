@@ -68,7 +68,7 @@ dt::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(75vh - 30vw);
+  min-height: calc(100vh - 30vw);
 }
 
 .main {
