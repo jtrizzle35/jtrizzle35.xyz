@@ -43,13 +43,11 @@ a:hover{background-color: #FFA1C4;}
 .site-main{margin:20px;}
 
 /* highlight song when hover */
-
 span:hover {
 background-color: #FFA1C4;
 }
 
 /* styling for list of songs */
-
 dt,
 dd {
   display: inline-block;
@@ -65,21 +63,18 @@ dt::after {
   content: "\00a0";
 }
 
-/* styling for home button */
-
-header {
-  position: relative;
+/* vertically centering home menu */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
 }
 
-.home {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100px;
-  text-decoration: none;
-  display: block;
-  font-size: 2vw; 
-  line-height: 0.35;
-  border: none;
-  background-color: white;
+.main {
+  flex: 1;  
+}
+
+body {
+  margin: 0;
 }
