@@ -5,29 +5,69 @@
 		<title>jtrizzle35.xyz</title>
 		<link rel="stylesheet" href="style.css">
 		<style>
+			form {
+			  max-width: 500px;
+			  margin: 150px auto;
+			}
+			
+			fieldset {
+			  padding: 30px;
+			  border: 0;
+			}
+			
+			input,
+			textarea,
+			button {
+			  width: 100%;
+			}
+			
+			button {
+			  border: 0;
+			}
+			
+			button:hover {
+			  background-color: #FFA1C4;
+			}
 		</style>
 	</head>
 	<body>
 		<main>
-      <form action="https://api.web3forms.com/submit" method="POST">
-
-    <!-- Replace with your Access Key -->
-    <input type="hidden" name="access_key" value="65673354-b198-46e3-8369-28fdf5621026">
-
-    <!-- Form Inputs. Each input must have a name="" attribute -->
-    <input type="text" name="name" required>
-    <input type="email" name="email" required>
-    <textarea name="message" required></textarea>
-
-    <!-- Honeypot Spam Protection -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-    <!-- Custom Confirmation / Success Page -->
-    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-
-    <button type="submit">Submit Form</button>
-
-</form>
+			     <!-- 
+			    =======================================================================
+			
+			    This is a working contact form. To receive email, 
+			    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+			
+			    Create Access Key here 👉 https://web3forms.com/
+			
+			    =======================================================================
+			 -->
+			
+			<form action="https://api.web3forms.com/submit" method="POST" id="form">
+			  <fieldset>
+			    <legend>are you mad that a sabrina carpenter song has only gotten stuck in my head once before bed? do you hate everything about my dumb website? do you have ideas for it? ask/say literally anything loosely related to all this and i'll try to post it on here with a response.</legend>
+			    <input type="hidden" name="access_key" value="65673354-b198-46e3-8369-28fdf5621026" />
+			    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+			    <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+			    <input type="checkbox" name="botcheck" id="" style="display: none;" />
+			    <div>
+			      <label for="name">name</label><br>
+			      <input type="text" name="name" id="name" required />
+			      <br><br>
+			    </div>
+			    <div>
+			      <label for="email">email address</label><br>
+			      <input type="email" name="email" id="email" required /><br><br>
+			    </div>
+			    <div>
+			      <label for="message">your message</label>
+			      <br>
+			      <textarea rows="5" name="message" id="message" required></textarea><br><br>
+			    </div>
+			
+			    <button type="submit"> send message </button>
+			  </fieldset>
+			</form>
 		</main>
 	</body>
 </html>
