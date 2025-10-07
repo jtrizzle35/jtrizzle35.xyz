@@ -51,7 +51,7 @@ background-color: #FFA1C4;
 dt,
 dd {
   display: inline-block;
-  width: calc(50% - 5rem);
+  width: calc(50% - 8rem);
   margin: 0;
 }
 
