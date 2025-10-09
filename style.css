@@ -79,3 +79,10 @@ dt::after {
 body {
   margin: 0;
 }
+
+/* attempting to stop iphone safari from resizing text */
+@media screen and (max-device-width: 480px){
+  body{
+    -webkit-text-size-adjust: 100%;
+  }
+}
