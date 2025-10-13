@@ -80,9 +80,14 @@ body {
   margin: 0;
 }
 
-/* attempting to stop iphone safari from resizing text */
+/* attempting to get mobile font sizes to look good */
 @media screen and (max-device-width: 480px){
-  body{
-    -webkit-text-size-adjust: 100%;
-  }
-}
+	body{
+    	-webkit-text-size-adjust: 100%;
+	}
+	p{
+		font-size: 23px;
+	}
+  	h2{
+        font-size:35px;
+    }
