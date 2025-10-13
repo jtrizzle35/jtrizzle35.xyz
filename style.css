@@ -40,6 +40,10 @@ ul{
     list-style-type: none;
 }
 
+button {
+	font-size:17px;
+}
+
 a:link{text-decoration: none; color:#000; background-color:#f2f2f2}
 a:visited{text-decoration: none; color:#000; background-color:#f2f2f2}
 a:hover{background-color: #FFA1C4;}
