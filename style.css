@@ -58,6 +58,11 @@ dd {
 	text-size: 17px;
 }
 
+dd{
+    width: calc(50% + 11rem);
+    vertical-align: top;
+}
+
 dt {
 	text-align: right;
 	width: calc(50% - 13rem);
