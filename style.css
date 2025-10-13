@@ -54,13 +54,13 @@ background-color: #FFA1C4;
 dt,
 dd {
 	display: inline-block;
-	width: calc(50% - 8rem);
 	margin: 0;
 	text-size: 17px;
 }
 
 dt {
-  text-align: right;
+	text-align: right;
+	width: calc(50% - 13rem);
 }
 
 dt::after {
