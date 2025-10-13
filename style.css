@@ -95,6 +95,9 @@ body {
         font-size:35px;
     }
 	dt, dd {
-	text-size: 23px;
+		font-size: 23px;
+	}
+	fieldset {
+		font-size: 23px;
 	}
 }
