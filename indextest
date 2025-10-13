@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>jtrizzle35.xyz</title>
+		<link rel="stylesheet" href="style.css">
+		<style>
+			*{text-align: center;}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>• • • • <a href="http://jtrizzle35.xyz/">jtrizzle35.xyz</a> • • • •</h1>
+			  <div class="content">
+     			<div class="main">
+					<h2>
+						• <a href="stuck_in_my_head.html">stuck in my head</a> • <br>
+						<!--• <a href="jtrizzle35.xyz/leave_a_comment">leave a comment</a> •<br>-->
+						• <a href="ask_a_question.html">ask a question!</a> •<br>
+						• <a href="about.html">about</a> •<br>
+					</h2>
+         		</div>
+    		</div>
+		</main>
+	</body>
+</html>
