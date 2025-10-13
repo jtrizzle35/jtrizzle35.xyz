@@ -36,10 +36,6 @@ p{
 	font-size:17px;
 }
 
-ul{
-    list-style-type: none;
-}
-
 button {
 	font-size:17px;
 }
@@ -55,6 +51,12 @@ background-color: #FFA1C4;
 }
 
 /* styling for list of songs */
+
+ul{
+    list-style-type: none;
+	line-height: 1.5;
+}
+
 dt,
 dd {
 	display: inline-block;
