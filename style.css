@@ -89,18 +89,18 @@ body {
     	-webkit-text-size-adjust: 100%;
 	}
 	p{
-		font-size: 23px;
+		font-size: 27px;
 	}
   	h2{
-        font-size:35px;
+        font-size: 37px;
     }
 	dt, dd {
-		font-size: 23px;
+		font-size: 27px;
 	}
 	fieldset {
-		font-size: 23px;
+		font-size: 27px;
 	}
 	button {
-		font-size: 23px;
+		font-size: 27px;
 	}
 }
