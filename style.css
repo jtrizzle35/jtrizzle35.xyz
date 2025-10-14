@@ -95,22 +95,6 @@ dt::after {
   content: "\00a0";
 }
 
-/* vertically centering home menu */
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 30vw);
-}
-
-.main {
-  flex: 1;  
-}
-
-body {
-  margin: 0;
-}
-
 /* attempting to get mobile font sizes to look good */
 @media screen and (max-device-width: 480px){
 	body{
