@@ -64,7 +64,8 @@ a:hover{
 
 /* highlight song when hover */
 span:hover {
-background-color: #FFA1C4;
+	background-color: #FFA1C4;
+	border-radius: 10px;
 }
 
 /* styling for list of songs */
