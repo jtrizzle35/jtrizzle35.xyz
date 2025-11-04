@@ -185,9 +185,3 @@ dt::after {
 			 	border-top-right-radius:3.4vh;
 			    border-bottom-right-radius:3.4vh;
 			}
-
-			.thispage{
-                text-decoration: underline;
-                text-decoration-style: dotted;
-                text-decoration-thickness: 3.5px;
-            }
