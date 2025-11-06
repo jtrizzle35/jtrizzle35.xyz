@@ -97,6 +97,29 @@ dt::after {
   content: "\00a0";
 }
 
+/* attempting to get mobile font sizes to look good */
+@media screen and (max-device-width: 480px){
+	body{
+    	-webkit-text-size-adjust: 100%;
+	}
+	p{
+		font-size: 27px;
+	}
+  	h2{
+        font-size: 37px;
+    }
+	dt, dd {
+		font-size: 27px;
+	}
+	fieldset {
+		font-size: 27px;
+	}
+	button {
+		font-size: 27px;
+	}
+}
+
+
 /* formatting expanding menu text */
 			h2{
 				text-align: center;
@@ -164,24 +187,3 @@ dt::after {
 			    border-bottom-right-radius:3.4vh;
 			}
 
-/* attempting to get mobile font sizes to look good */
-@media screen and (max-device-width: 480px){
-	body{
-    	-webkit-text-size-adjust: 100%;
-	}
-	p{
-		font-size: 27px;
-	}
-  	h2{
-        font-size: 37px;
-    }
-	dt, dd {
-		font-size: 27px;
-	}
-	fieldset {
-		font-size: 27px;
-	}
-	button {
-		font-size: 27px;
-	}
-}
