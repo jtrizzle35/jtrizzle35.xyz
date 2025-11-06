@@ -120,6 +120,10 @@ dt::after {
 	.mainmenu {
 		font-size: 37px;
 	}
+	 .menuitem, .menuitem2, .bracket {
+        font-size: 30px;
+        display: inline
+    }
 }
 
 
@@ -190,3 +194,23 @@ dt::after {
 			    border-bottom-right-radius:3.4vh;
 			}
 
+			 p:not(.bracket){
+                max-width: 900px;
+                padding: 0 7px;
+                margin-right: auto;
+                margin-left: auto;
+				line-height: 1.5;
+            }
+
+			.stuck{
+				padding-right: 35px;
+				padding-left: 20px;
+			}
+
+			
+            @media screen and (min-device-width: 480px) {
+                .bracket{
+				display: inline;
+				font-size: 21px;
+			}
+			
