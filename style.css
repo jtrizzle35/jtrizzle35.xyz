@@ -117,6 +117,9 @@ dt::after {
 	button {
 		font-size: 27px;
 	}
+	.mainmenu {
+		font-size: 37px;
+	}
 }
 
 
