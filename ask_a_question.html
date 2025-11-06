@@ -15,7 +15,7 @@
 			}
 			
 			fieldset {
-			  padding: 30px;
+			  padding: 30px 0px 30px 30px;
 			  border: 0;
 			}
 			
@@ -55,6 +55,14 @@
 			.bracket{
 				display: inline;
 				font-size: 21px;
+			}
+
+			#close {
+			    display:inline-block;
+			    float: right;
+			    padding:11px 15px;
+			    border-radius: 60px;
+			    font-size: 20px
 			}
 		</style>
 	</head>
@@ -96,6 +104,7 @@
 			 -->
 			
 			<form action="https://api.web3forms.com/submit" method="POST" id="form">
+			  <span id="close" onclick="this.parentNode.remove(); return false;">x</span>
 			  <fieldset>
 			    <legend>
 					<br><br>
