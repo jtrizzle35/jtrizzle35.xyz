@@ -41,6 +41,12 @@ p{
     text-align: center;
 }
 
+ @media screen{ 
+	.bullets{
+    	-webkit-text-size-adjust: 100%;
+	}
+ }
+
 button {
 	font-size:17px;
     color:#000000;
