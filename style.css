@@ -47,14 +47,14 @@ a:link:not(.menuitem){
 	text-decoration: none; 
 	color:#000; 
 	background-color:#f2f2f2;
-	border-radius:3.4vh;
+	border-radius:5vh;
 }
 
 a:visited:not(.menuitem){
 	text-decoration: none; 
 	color:#000; 
 	background-color:#f2f2f2
-	border-radius:3.4vh;
+	border-radius:5vh;
 }
 
 a:hover{
