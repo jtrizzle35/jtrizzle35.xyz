@@ -36,6 +36,11 @@ p{
 	font-size:17px;
 }
 
+.bullets{
+	font-size: 3vw;
+    text-align: center;
+}
+
 button {
 	font-size:17px;
     color:#000000;
