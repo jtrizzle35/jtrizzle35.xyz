@@ -137,9 +137,16 @@ dt::after {
 	.mainmenu {
 		font-size: 37px;
 	}
-	 .menuitem, .menuitem2, .bracket {
+	.menuitem, .menuitem2, .bracket {
         font-size: 30px;
         display: inline
+    }
+	.bullets{
+		font-size: 26px;
+		max-height: 26px;
+	}
+	p:not(.bracket){
+				margin-top: 15px;
     }
 }
 
