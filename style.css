@@ -91,6 +91,7 @@ span:not(#close):hover {
 ul{
     list-style-type: none;
 	line-height: 1.5;
+	margin-top: 0;
 }
 
 dt,
