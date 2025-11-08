@@ -37,15 +37,21 @@ p{
 }
 
 .bullets{
-	font-size: 3vw;
-    text-align: center;
+    font-size: 18.08px;
+    max-width: 900px;
+    max-height: 18px;
+    overflow: hidden;
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
 }
-
- @media screen{ 
+			
+@media screen{ 
 	.bullets{
     	-webkit-text-size-adjust: 100%;
 	}
- }
+}
 
 button {
 	font-size:17px;
