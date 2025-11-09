@@ -133,7 +133,7 @@ dt::after {
 		padding-inline-start: 25px;
 	}    
 	dd{
-    	width: calc(50% + 17rem);
+    	width: calc(50% + 16rem);
 	}
 	dt {
 		text-align: right;
