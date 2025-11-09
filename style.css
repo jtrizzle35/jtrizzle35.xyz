@@ -92,6 +92,10 @@ ul{
     list-style-type: none;
 	line-height: 1.5;
 	margin-top: 0;
+	max-width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-inline-start: 0;
 }
 
 dt,
@@ -102,13 +106,13 @@ dd {
 }
 
 dd{
-    width: calc(50% + 11rem);
+    width: calc(50% + 20rem);
     vertical-align: top;
 }
 
 dt {
 	text-align: right;
-	width: calc(50% - 13rem);
+	width: calc(50% - 21rem);
 }
 
 dt::after {
