@@ -108,11 +108,13 @@ dd {
 dd{
     width: calc(50% + 20rem);
     vertical-align: top;
+	max-width: calc(100% - 125px);
 }
 
 dt {
 	text-align: right;
 	width: calc(50% - 21rem);
+	min-width: 114px;
 }
 
 dt::after {
