@@ -81,7 +81,7 @@ a:hover{
 .site-main{margin:20px;}
 
 /* highlight song when hover */
-span:not(#close):hover {
+.songrow:hover {
 	background-color: #FFA1C4;
 	border-radius: 10px;
 }
