@@ -129,6 +129,13 @@ dt::after {
 	dt, dd {
 		font-size: 27px;
 	}
+	dd{
+    	width: calc(50% + 16rem);
+	}
+	dt {
+		text-align: right;
+		width: calc(50% - 18rem);
+	}
 	fieldset {
 		font-size: 27px;
 	}
