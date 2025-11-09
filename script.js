@@ -66,9 +66,16 @@ async function fetchAndDisplayStuckSongs() {
             const date = song.Date && song.Date.toDate ? song.Date.toDate().toLocaleDateString() : 'Unknown Date';
             const songTitle = song.Song || 'Unknown Song';
 
+            //attempting to change formatting of date
+            var MyDate = new Date();
+            var MyDateString;
+            MyDateString = ('0' + MyDate.getDate()).slice(-2) + '/'
+                         + ('0' + (MyDate.getMonth()+1)).slice(-2) + '/'
+                         + MyDate.getFullYear();
+          
             displayHtml += `
                 <dl>  
-                    <span><dt>${date}</dt>
+                    <span><dt>${MyDateString}</dt>
                     <dd>${artist}:
                     ${songTitle}</dd></span>
                 </dl>
