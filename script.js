@@ -62,8 +62,7 @@ async function fetchAndDisplayStuckSongs() {
         displayHtml += "<ul>";
         allStuckSongsData.forEach(song => {
             const artist = song.Artist || 'Unknown Artist';
-            // Assuming 'Date' is a Firestore Timestamp, convert it
-            const date = song.Date && song.Date.toDate ? song.Date.toDate().toLocaleDateString() : 'Unknown Date';
+            const date = song.Date.toDate().toLocaleDateString() : 'Unknown Date';
             const songTitle = song.Song || 'Unknown Song';
           
             displayHtml += `
