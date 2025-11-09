@@ -65,17 +65,10 @@ async function fetchAndDisplayStuckSongs() {
             // Assuming 'Date' is a Firestore Timestamp, convert it
             const date = song.Date && song.Date.toDate ? song.Date.toDate().toLocaleDateString() : 'Unknown Date';
             const songTitle = song.Song || 'Unknown Song';
-
-            //attempting to change formatting of date
-            var MyDate = new Date();
-            var MyDateString;
-            MyDateString = ('0' + MyDate.getDate()).slice(-2) + '/'
-                         + ('0' + (MyDate.getMonth()+1)).slice(-2) + '/'
-                         + MyDate.getFullYear();
           
             displayHtml += `
                 <dl>  
-                    <span><dt>${MyDateString}</dt>
+                    <span><dt>${Date}</dt>
                     <dd>${artist}:
                     ${songTitle}</dd></span>
                 </dl>
