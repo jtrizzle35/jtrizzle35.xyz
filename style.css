@@ -129,12 +129,15 @@ dt::after {
 	dt, dd {
 		font-size: 27px;
 	}
+	ul{
+		padding-inline-start: 25px;
+	}    
 	dd{
-    	width: calc(50% + 16rem);
+    	width: calc(50% + 17rem);
 	}
 	dt {
 		text-align: right;
-		width: calc(50% - 18rem);
+		width: calc(50% - 17rem);
 	}
 	fieldset {
 		font-size: 27px;
