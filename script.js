@@ -62,7 +62,12 @@ async function fetchAndDisplayStuckSongs() {
         displayHtml += "<ul>";
         allStuckSongsData.forEach(song => {
             const artist = song.Artist || 'Unknown Artist';
-            const date = song.Date.toDate().toLocaleDateString() || 'Unknown Date';
+            const options = {
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit'
+            };
+            const date = song.Date.toDate().toLocaleDateString('en-US', options) || 'Unknown Date';
             const songTitle = song.Song || 'Unknown Song';
           
             displayHtml += `
