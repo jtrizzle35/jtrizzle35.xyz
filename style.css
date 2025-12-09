@@ -187,21 +187,23 @@ dt::after {
 				transition: max-width 1s ease-in-out;
 			}
 
-			h2:hover #hide{
-  				max-width: 100%;
-  				background-color: #FFA1C4; 
- 				border-top-right-radius:3.4vh;
-    			border-bottom-right-radius:3.4vh;
-				border-bottom-left-radius: 0vh;
-    			border-top-left-radius: 0vh;
-			}
-
-			.expanding:hover .menuitem{
-    			background-color: #FFA1C4;
-    			border-top-left-radius:3.4vh;
-    			border-bottom-left-radius:3.4vh;
-    			border-bottom-right-radius: 0vh;
-    			border-top-right-radius: 0vh;
+			@media (pointer: fine){
+				h2:hover #hide{
+	  				max-width: 100%;
+	  				background-color: #FFA1C4; 
+	 				border-top-right-radius:3.4vh;
+	    			border-bottom-right-radius:3.4vh;
+					border-bottom-left-radius: 0vh;
+	    			border-top-left-radius: 0vh;
+				}
+	
+				.expanding:hover .menuitem{
+	    			background-color: #FFA1C4;
+	    			border-top-left-radius:3.4vh;
+	    			border-bottom-left-radius:3.4vh;
+	    			border-bottom-right-radius: 0vh;
+	    			border-top-right-radius: 0vh;
+				}
 			}
 
 			h2{
