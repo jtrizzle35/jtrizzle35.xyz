@@ -89,6 +89,9 @@ a:visited:not(.menuitem){
     h1 a:visited{
 		text-decoration: none; 
 	}
+	.mainmenu{
+		text-decoration: none;
+	}
 }
 
 
