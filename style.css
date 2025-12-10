@@ -56,19 +56,19 @@ p{
 button {
 	font-size:17px;
     color:#000000;
-    background-color:#f2f2f2;
+    background-color:#ededed;
 	border-radius: 10px;
 }
 
 a:link:not(.menuitem){
 	color:#000; 
-	background-color:#f2f2f2;
+	background-color:#ededed;
 	border-radius:5.5vh;
 }
 
 a:visited:not(.menuitem){
 	color:#000; 
-	background-color:#f2f2f2
+	background-color:#ededed
 	border-radius:5.5vh;
 }
 
@@ -250,7 +250,7 @@ dt::after {
 
 			.menuitem{
         		text-decoration: none; 
-    			background-color: #f2f2f2;
+    			background-color: #ededed;
        			border-top-left-radius:3.4vh;
 			    border-bottom-left-radius:3.4vh;
 			    border-bottom-right-radius: 3.4vh;
@@ -259,7 +259,7 @@ dt::after {
 			}
 
 			#hide{
-			  	background-color: #f2f2f2; 
+			  	background-color: #ededed; 
 			 	border-top-right-radius:3.4vh;
 			    border-bottom-right-radius:3.4vh;
 			}
