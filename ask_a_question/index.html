@@ -47,11 +47,6 @@
 				border-style: dotted;
             }
 
-			.stuck{
-				padding-left: 34.75px;
-				padding-right: 21px;
-			}
-
 			#close {
 			    display:inline-block;
 			    float: right;
@@ -71,10 +66,17 @@
 			legend{
 				text-align: justify;
 			}
-			.askabout{
-				padding-left: 14.5px;
+			
+			@media screen and (min-device-width: 480px){
+				.askabout{
+					padding-left: 14.5px;
+				}
+				.stuck{
+				padding-left: 34.75px;
+				padding-right: 21px;
+				}
 			}
-
+			
 			@media screen and (max-device-width: 480px){
 	            .bracket{
 	                display: none;
@@ -87,6 +89,11 @@
 				.menuitem2{
 					text-decoration: none;
 				}
+				.stuck{
+					padding-left: 30px;
+					padding-right: 30px;
+				}
+			}
 		</style>
 	</head>
 	<body>
