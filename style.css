@@ -272,14 +272,15 @@ dt::after {
 				line-height: 1.5;
             }
 
-			.stuck{
-				padding-right: 35.75px;
-				padding-left: 20px;
-			}
-
 			
             @media screen and (min-device-width: 480px) {
                 .bracket{
 				display: inline;
 				font-size: 21px;
+				}
+				
+				.stuck{
+					padding-right: 35.75px;
+					padding-left: 20px;
+				}
 			}
