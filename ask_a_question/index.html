@@ -19,7 +19,7 @@
 			  border: 0;
 			}
 			
-			input,
+			input:not([type='checkbox']),
 			textarea{
 			  width: 100%;
 			}
@@ -161,6 +161,11 @@
 			      <br>
 			      <textarea rows="5" name="message" id="message" required></textarea><br><br>
 			    </div>
+				<div>
+                    <input type="checkbox" name="subscribe" value="subscribed">
+                    <label for="subscribe">email me any time this genius website receives a major update</label>
+                </div>
+    			<br>
 			
 			    <button type="submit"> send message </button>
 			  </fieldset>
