@@ -66,6 +66,23 @@
 			legend{
 				text-align: justify;
 			}
+
+			input[type='checkbox']{
+                margin-top: 2px;
+            }
+
+            .subscribe{
+              display: flex;
+              align-items: flex-start;
+            }	
+
+            label[for=subscribe]{
+                padding-left: 10px;
+            }
+			
+            textarea{
+                margin-top: 8px;
+            }
 			
 			@media screen and (min-device-width: 480px){
 				.askabout{
@@ -165,7 +182,7 @@
 			      <br>
 			      <textarea rows="5" name="message" id="message" required></textarea><br><br>
 			    </div>
-				<div>
+				<div class="subscribe">
                     <input type="checkbox" name="subscribe" id="subscribe" value="I would like to subscribe">
                     <label for="subscribe">email me any time this genius website receives a major update</label>
                 </div>
