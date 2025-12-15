@@ -83,6 +83,32 @@
             textarea{
                 margin-top: 8px;
             }
+			p:not(.bracket){
+                 max-width: 850px;
+                padding: 0 0 0 50px;
+                margin-right: auto;
+                margin-left: auto;
+				line-height: 1.5;
+            }
+    		
+            h3, h4{
+               max-width: 900px;
+                padding: 0 7px;
+                margin-right: auto;
+                margin-left: auto;
+				line-height: 1.5;
+                margin-block-end: 0em;
+            }	
+            h3{
+                font-size: 17px;
+            }
+            h4, .admin{
+                font-size: 13px;
+                margin-block-start: 0em;
+            }
+            .answer{
+                margin-block-end: 0em;
+            }
 			
 			@media screen and (min-device-width: 480px){
 				.askabout{
@@ -194,6 +220,20 @@
 			    <button type="submit"> send message </button>
 			  </fieldset>
 			</form>
+			<br>
+            <h3>
+				THE CHECKBOX INCLUDED ON THE SUBMISSION FORM ISN'T COMPOSED OF DOTS, WHICH SEEMS TO BE INCONGRUOUS WITH THE ARTISTIC VISION 
+				EXECUTED THROUGHOUT THE REST OF THIS WEBSITE. IS THERE ANY PARTICULAR REASON FOR THIS? 
+			</h3>
+            <h4>
+               Jason • 12/15/2025
+            </h4>
+   			<p class="answer">
+        		i'm so glad you asked! checkboxes are unfortunately not easily customizable, so if i wanted the checkbox to be dotted, i would have to build my own checkbox from scratch. i don't feel like doing that so here we are.
+    		</p>
+    		<p class="admin">
+        		Admin • 12/15/2025
+    		</p>
 		</main>
 	</body>
 </html>
