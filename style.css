@@ -72,7 +72,7 @@ a:visited:not(.menuitem){
 	border-radius:5.5vh;
 }
 
-@media screen and (min-device-width: 480px) {
+@media (pointer: fine) {
     a:visited:not(.menuitem){
 		text-decoration: none; 
 	}
@@ -82,7 +82,7 @@ a:visited:not(.menuitem){
 	}
 }
 
-@media screen and (max-device-width: 480px) {
+@media (pointer: coarse) {
     h1 a:link{
 		text-decoration: none; 
 	}
