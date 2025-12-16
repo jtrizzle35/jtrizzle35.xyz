@@ -273,7 +273,7 @@ dt::after {
             }
 
 			
-            @media screen and (min-device-width: 480px) {
+            @media (pointer: fine) {
                 .bracket{
 				display: inline;
 				font-size: 21px;
