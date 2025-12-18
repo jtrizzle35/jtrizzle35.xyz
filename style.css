@@ -153,6 +153,9 @@ dt::after {
 	p, dt, dd, fieldset, button, .question{
 		font-size: 27px;
 	}
+	h4, .admin{
+        font-size: 21px;
+    }
 	ul{
 		padding-inline-start: 25px;
 	}    
