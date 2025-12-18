@@ -147,13 +147,10 @@ dt::after {
 	body{
     	-webkit-text-size-adjust: 100%;
 	}
-	p{
-		font-size: 27px;
-	}
   	h2{
         font-size: 37px;
     }
-	dt, dd {
+	p, dt, dd, fieldset, button, .question{
 		font-size: 27px;
 	}
 	ul{
@@ -165,12 +162,6 @@ dt::after {
 	dt {
 		text-align: right;
 		width: calc(50% - 17rem);
-	}
-	fieldset {
-		font-size: 27px;
-	}
-	button {
-		font-size: 27px;
 	}
 	.mainmenu {
 		font-size: 37px;
