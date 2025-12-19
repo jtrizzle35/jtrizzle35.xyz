@@ -255,7 +255,7 @@ dt::after {
 			    border-bottom-right-radius:3.4vh;
 			}
 
-			 p:not(.bracket, .answer){
+			 p:not(.bracket, .answer, .admin){
                 max-width: 900px;
                 padding: 0 7px;
                 margin-right: auto;
