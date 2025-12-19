@@ -174,7 +174,7 @@ dt::after {
 		font-size: 26px;
 		max-height: 26px;
 	}
-	p:not(.bracket, .admin){
+	p:not(.bracket, .admin, .answer){
 				margin-top: 15px;
     }
 }
